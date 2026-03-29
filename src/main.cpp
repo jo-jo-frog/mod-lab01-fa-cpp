@@ -4,7 +4,6 @@
 
 int main() {
     std::cout << "=== Тесты для faStr1 (слова без цифр) ===\n";
-    
     const char* t1[] = {
         "Hello 123 world!",
         "abc def 789",
