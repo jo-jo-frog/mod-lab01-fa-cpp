@@ -5,8 +5,6 @@
 #include <cstring>
 #include <cstddef>
 
-using namespace std;
-
 unsigned int faStr1(const char* str) {
     if (!str) {
         return 0;
