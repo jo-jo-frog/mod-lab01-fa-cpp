@@ -5,6 +5,8 @@
 #include <cstring>
 #include <cstddef>
 
+using namespace std;
+
 unsigned int faStr1(const char* str) {
     if (!str) {
         return 0;
@@ -83,20 +85,17 @@ unsigned int faStr3(const char* str) {
         if (ch == '\0') {
             if (Wordcounter != 0) {
                 answer = (length + Wordcounter / 2) / Wordcounter;
-            }
-            else {
+            } else {
                 return 0;
             }
-        }
-        else {
+        } else {
             if (ch != ' ') {
                 if (!isWord) {
                     Wordcounter++;
                     isWord = true;
                 }
                 length++;
-            }
-            else {
+            } else {
                 isWord = false;
             }
         }
