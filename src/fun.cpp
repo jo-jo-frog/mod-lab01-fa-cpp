@@ -75,6 +75,7 @@ unsigned int faStr3(const char* str) {
     size_t len = strlen(str);
     unsigned int length = 0;
     int Wordcounter = 0;
+    bool isWord = false;
     unsigned answer = 0;
 
     for (size_t i = 0; i <= len; i++) {
@@ -87,9 +88,13 @@ unsigned int faStr3(const char* str) {
             }
         } else {
             if (ch != ' ') {
+                if (!isWord) {
+                    Wordcounter++;
+                    isWord = false;
+                }
                 length++;
             } else {
-                Wordcounter++;
+                isWord = false;
             }
         }
     }
